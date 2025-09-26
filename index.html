@@ -8,10 +8,86 @@
 </head>
 <body>
 	<header>
+		<div class="header">
+			<img class="logo" src="images/logo.png">
 
+			<span class="header-menu">
+				<button class="header-menu-button">
+					<p class="header-menu-button-text">HOME</p>
+				</button>
+				<button class="header-menu-button">
+					<p class="header-menu-button-text">ABOUT US</p>
+				</button>
+				<button class="header-menu-button" id="services-button" onclick="servicesDropdown()">
+					<p class="header-menu-button-text">SERVICES v</p>
+					<div class="services-menu">
+						<a class="services-menu-link">Investments opportunities</a>
+						<a class="services-menu-link">Business relocation</a>
+						<a class="services-menu-link">Family relocation</a>
+					</div>
+				</button>
+				<button class="header-menu-button">
+					<p class="header-menu-button-text">INVEST IN CYPRUS</p>
+				</button>
+				<button class="header-menu-button">
+					<p class="header-menu-button-text">MIGRATION</p>
+				</button>
+				<button class="header-menu-button">
+					<p class="header-menu-button-text">CONTACT US</p>
+				</button>
+			</span>
+
+			<button class="get-in-touch-button">
+				<p class="get-in-touch-text">Get in touch</p>
+			</button>
+
+			<button class="hamburger-button" onclick="hamburger()">
+				<div class="hamburger-stick"></div>
+				<div class="hamburger-stick"></div>
+				<div class="hamburger-stick"></div>
+			</button>
+		</div>
+
+		<div class="hamburger-menu">
+			<button class="header-menu-button">
+				<p class="header-menu-button-text">HOME</p>
+			</button>
+			<button class="header-menu-button">
+				<p class="header-menu-button-text">ABOUT US</p>
+			</button>
+			<button class="header-menu-button">
+				<p class="header-menu-button-text">SERVICES</p>
+			</button>
+			<button class="header-menu-button">
+				<p class="header-menu-button-text">INVEST IN CYPRUS</p>
+			</button>
+			<button class="header-menu-button">
+				<p class="header-menu-button-text">CONTACT US</p>
+			</button>
+		</div>
 	</header>
 	<main>
-		<h1>Hello</h1>
+		
 	</main>
+
+	<script>
+		function hamburger() {
+			var menu = document.getElementsByClassName("hamburger-menu");
+			if (menu[0].style.display === "none") {
+				menu[0].style.display = "flex";
+			} else {
+				menu[0].style.display = "none";
+			}
+		}
+
+		function servicesDropdown() {
+			var menu = document.getElementsByClassName("services-menu");
+			if (menu[0].style.display === "none") {
+				menu[0].style.display = "flex";
+			} else {
+				menu[0].style.display = "none";
+			}
+		}
+	</script>
 </body>
 </html>
