@@ -82,6 +82,12 @@ body {
 	text-decoration: underline;
 }
 
+.header-end {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 60px;
+}
 
 /* Get in touch button */
 .get-in-touch-button {
@@ -137,6 +143,7 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	display: none;
+	cursor: pointer;
 }
 
 .hamburger-stick {
@@ -160,6 +167,9 @@ body {
 
 /* Media */
 @media screen and (max-width: 1000px) {
+	.header {
+		justify-content: space-around;
+	}
 	.header-menu {
 		display: none;
 	}
