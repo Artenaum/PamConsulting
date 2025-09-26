@@ -12,6 +12,7 @@ body {
 	margin: 0;
 }
 
+/* Header */
 .header {
 	margin: 0;
 	padding: 0;
@@ -57,6 +58,7 @@ body {
 	text-decoration: underline;
 }
 
+/* Services dropdown */
 .services-menu {
 	display: none;
 	position: absolute;
@@ -80,6 +82,8 @@ body {
 	text-decoration: underline;
 }
 
+
+/* Get in touch button */
 .get-in-touch-button {
 	width: 180px;
 	height: 48px;
@@ -112,11 +116,13 @@ body {
 	background-clip: text;
 }
 
+
+/* Hamburger menu */
 .hamburger-menu {
 	position: relative;
-	width: 200px;
+	left: 0px;
+	width: 100%;
 	height: 260px;
-	float: right;
 	background: white;
 	display: none;
 	flex-direction: column;
@@ -139,6 +145,20 @@ body {
 	background: white;
 }
 
+
+/* Swiper */
+.swiper {
+	width: 100%;
+	height: 100%
+}
+
+.swiper-slide img {
+	width: 100%;
+	object-fit: contain;
+	z-index: -1;
+}
+
+/* Media */
 @media screen and (max-width: 1000px) {
 	.header-menu {
 		display: none;
