@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "Avenir";
+	src: url('fonts/avenir-next-medium.ttf');
+}
+
+h1 {
+	font-family: "Avenir",monospace;
+}
