@@ -1,12 +1,13 @@
-console.log("!");
-
-const swiper = new Swiper('.swiper'
-	,{
+const swiper = new Swiper('.swiper', {
+	speed: 400,
 	direction: 'vertical',
-	allowTouchMove: false,
-	
+	autoHeight: true,
+	autoplay : {
+		delay: 3000,
+	},
 	pagination: {
 		el: '.swiper-pagination',
+		clickable: true,
 	},
 });
 
