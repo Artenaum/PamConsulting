@@ -277,7 +277,7 @@ body {
 	color: #434364;
 }
 
-.slide-button {
+.find-out-more-button {
 	width: 200px;
 	height: 48px;
 	background: linear-gradient(90deg, #ffeb80, #fdbfa3);
@@ -289,7 +289,7 @@ body {
 	color: #6d31d0;
 }
 
-.slide-button:hover {
+.find-out-more-button:hover {
 	background: linear-gradient(90deg, #6d31d0, #ab80ef);
 	border: 1px solid #ffdb80;
 	color: #ffdb80;
@@ -337,6 +337,24 @@ body {
 		linear-gradient(to right, rgba(142, 161, 189, 1), rgba(142, 161, 189, 0)),
 		url("images/image6.jpg");
 	background-size: cover;
+}
+
+.paradise-section {
+	display: flex;
+	justify-content: space-between;
+	gap: 70px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: white;
+	
+}
+
+.paradise-img-wrapper img {
+	width: 100%;
+}
+
+.paradise-content {
+	width: 480px;
 }
 
 /* Media */
