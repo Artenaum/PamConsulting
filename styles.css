@@ -397,6 +397,7 @@ body {
 	font-size: 40px;
 	font-weight: 300;
 	color: #434364;
+	margin: 0;
 }
 
 .paradise-text {
@@ -478,12 +479,8 @@ body {
 	.paradise-section {
 		flex-direction: column;
 		align-items: center;
-		gap: 0px;
+		gap: 40px;
 		padding-top: 0;
-	}
-
-	#paradise-img-wrapper-right {
-		display: none;
 	}
 
 	.paradise-img-wrapper {
@@ -491,8 +488,10 @@ body {
 		flex: 1;
 	}
 
-	.paradise-img-wrapper {
-		object-fit: fill;
+	.paradise-img-wrapper img {
+		object-fit: cover;
+		overflow-y: hidden;
+		max-height: 300px;
 	}
 
 	.paradise-content {
