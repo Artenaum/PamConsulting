@@ -1,9 +1,9 @@
 const swiper = new Swiper('.swiper', {
-	speed: 400,
+	speed: 1000,
 	direction: 'vertical',
 	autoHeight: true,
 	autoplay : {
-		delay: 3000,
+		delay: 5000,
 	},
 	pagination: {
 		el: '.swiper-pagination',
