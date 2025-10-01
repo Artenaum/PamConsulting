@@ -28,3 +28,21 @@ function servicesDropdown() {
 		menu[0].style.display = "none";
 	}
 }
+
+const wcc_headline_title = document.getElementById("wcc-headline-title");
+const wcc_headline_title_text_old = "WHY CHOOSE CYPRUS?";
+const wcc_headline_title_text_new = "Why Choose Cyprus?";
+
+function widthAdapt() {
+	const width = window.innerWidth;
+
+	if (width <= 480) {
+		wcc_headline_title.textContent = wcc_headline_title_text_new;
+	} else {
+		wcc_headline_title.textContent = wcc_headline_title_text_old;
+	}
+}
+
+widthAdapt();
+
+window.addEventListener('resize', widthAdapt);

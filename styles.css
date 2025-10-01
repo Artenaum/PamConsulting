@@ -158,6 +158,12 @@ body {
 }
 
 
+.main-flex {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
 .upper-sections {
 	display: flex;
 	flex-direction: column;
@@ -534,6 +540,126 @@ body {
 	color: #434364;
 }
 
+
+/* Why Choose Cyprus Section (wcc) */
+.wcc-section {
+	background: linear-gradient(#fefc9e, #fdbfa3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 60px;
+}
+
+.wcc-headline {
+	margin-top: 80px;
+	max-width: 580px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wcc-headline h1 {
+	margin: 0;
+	font-family: "Avenir Medium";
+	font-size: 36px;
+	line-height: 40px;
+	text-align: center;
+	color: #434364;
+	text-wrap-mode: nowrap;
+}
+
+.wcc-headline p {
+	margin: 0;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #434364;
+}
+
+.wcc-boxes {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+.wcc-box-set {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 20px;
+}
+
+.wcc-box {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	width: 280px;
+	gap: 24px;
+}
+
+.wcc-icon {
+	width: 150px;
+	height: 150px;
+	border-radius: 800px;
+}
+
+#wcc-icon-1 {
+	background: url("/images/icons/money-bag.svg") 50% no-repeat,
+	linear-gradient(to right, #828cde, #6d31d0);
+}
+
+#wcc-icon-2 {
+	background: url("/images/icons/haze.svg") 50% no-repeat,
+	linear-gradient(to right, #fe6f2d, #ffd059);
+}
+
+#wcc-icon-3 {
+	background: url("/images/icons/human-resources.svg") 50% no-repeat,
+	linear-gradient(to right, #828cde, #00b8c3);
+}
+
+#wcc-icon-4 {
+	background: url("/images/icons/house.svg") 50% no-repeat,
+	linear-gradient(to right, #ffb9af 30%, #a651fb);
+}
+
+.wcc-text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px;
+}
+
+.wcc-text-block h1 {
+	margin: 0;
+	margin-top: 10px;
+	font-family: "Montserrat SemiBold";
+	font-size: 20px;
+	line-height: 32px;
+	text-align: center;
+	color: #6d31d0;
+}
+
+.wcc-text-block p {
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #434364;
+}
+
+
 /* Media */
 @media screen and (max-width: 1000px) {
 	.header {
@@ -635,7 +761,6 @@ body {
 
 	.paradise-img-wrapper img {
 		object-fit: cover;
-		overflow-y: hidden;
 		max-height: 300px;
 	}
 
@@ -647,6 +772,14 @@ body {
 
 	.paradise-title {
 		text-align: center;
+	}
+
+	.wcc-section {
+		z-index: 2;
+	}
+
+	.wcc-headline {
+		max-width: 80%;
 	}
 }
 
@@ -706,5 +839,53 @@ body {
 
 	#our-services-card-image-2 {
 		object-position: 0px -190px;
+	}
+
+	.wcc-section {
+		gap: 40px;
+	}
+
+	.wcc-headline {
+		margin-top: 60px;
+		gap: 30px;
+	}
+
+	.wcc-headline h1 {
+		font-family: "Montserrat SemiBold";
+		font-size: 40px;
+		line-height: 29px;
+	}
+
+	.wcc-boxes {
+		margin-bottom: 60px;
+	}
+
+	.wcc-box {
+		width: 180px;
+	}
+
+	.wcc-icon {
+		height: 100px;
+		width: 100px;
+	}
+
+	#wcc-icon-1 {
+		background: url("/images/icons/money-bag.svg") 50%/60% no-repeat,
+		linear-gradient(to right, #828cde, #6d31d0);
+	}
+
+	#wcc-icon-2 {
+		background: url("/images/icons/haze.svg") 50%/60% no-repeat,
+		linear-gradient(to right, #fe6f2d, #ffd059);
+	}
+
+	#wcc-icon-3 {
+		background: url("/images/icons/human-resources.svg") 50%/60% no-repeat,
+		linear-gradient(to right, #828cde, #00b8c3);
+	}
+
+	#wcc-icon-4 {
+		background: url("/images/icons/house.svg") 50%/60% no-repeat,
+		linear-gradient(to right, #ffb9af 30%, #a651fb);
 	}
 }
