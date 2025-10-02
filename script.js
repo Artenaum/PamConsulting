@@ -29,20 +29,86 @@ function servicesDropdown() {
 	}
 }
 
-const wcc_headline_title = document.getElementById("wcc-headline-title");
-const wcc_headline_title_text_old = "WHY CHOOSE CYPRUS?";
-const wcc_headline_title_text_new = "Why Choose Cyprus?";
+// Screen width tweeks
+const wccHeadlineTitle = document.getElementById("wcc-headline-title");
+const wccHeadlineTitleTextOld = "WHY CHOOSE CYPRUS?";
+const wccHeadlineTitleTextNew = "Why Choose Cyprus?";
+
+const mapHeadlineParagraph = document.getElementById("map-headline-paragraph");
+const mapHeadlineParagraphDesktop = "Click your mouse over any city to learn more about it";
+const mapHeadlineParagraphMobile = "Tap on any city to learn more about it";
 
 function widthAdapt() {
 	const width = window.innerWidth;
 
-	if (width <= 480) {
-		wcc_headline_title.textContent = wcc_headline_title_text_new;
+	if (width >= 1000) {
+		mapHeadlineParagraph.textContent = mapHeadlineParagraphDesktop;
 	} else {
-		wcc_headline_title.textContent = wcc_headline_title_text_old;
+		mapHeadlineParagraph.textContent = mapHeadlineParagraphMobile;
+	}
+
+	if (width <= 480) {
+		wccHeadlineTitle.textContent = wccHeadlineTitleTextNew;
+	} else {
+		wccHeadlineTitle.textContent = wccHeadlineTitleTextOld;
 	}
 }
 
 widthAdapt();
 
 window.addEventListener('resize', widthAdapt);
+
+// Cyprus Map
+const nicosiaMap = document.getElementById("nicosia-map");
+const limassolMap = document.getElementById("limassol-map");
+
+const nicosiaMapLabel = document.getElementById("nicosia-map-label");
+const limassolMapLabel = document.getElementById("limassol-map-label");
+
+var mapDescriptionCardNicosia = document.getElementById("map-description-card-nicosia");
+var mapDescriptionCardLimassol = document.getElementById("map-description-card-limassol");
+
+var cards = [];
+cards.push(mapDescriptionCardNicosia);
+cards.push(mapDescriptionCardLimassol);
+
+function hideCityCards() {
+	cards.forEach((card) => card.style.display = "none");
+}
+
+function cyprusMapClickHandler(city) {
+	switch (city) {
+		case "Limassol": {
+			if (window.getComputedStyle(mapDescriptionCardLimassol).display === "none") {
+				console.log("Showing Limassol card");
+				hideCityCards();
+				mapDescriptionCardLimassol.style.display = "flex";
+				break;
+			} else {
+				console.log("Limassol card already visible");
+				break;
+			}
+		}
+		case "Nicosia": {
+			if (window.getComputedStyle(mapDescriptionCardNicosia).display === "none") {
+				console.log("Showing Nicosia card");
+				hideCityCards();
+				mapDescriptionCardNicosia.style.display = "flex";
+				break;
+			} else {
+				console.log("Nicosia card already visible");
+				break;
+			}
+		}
+		default: {
+			alert("Something went very wrong!!!");
+			break;
+		}
+	}
+}
+
+nicosiaMap.addEventListener('click', event => {cyprusMapClickHandler("Nicosia")});
+limassolMap.addEventListener('click', event => {cyprusMapClickHandler("Limassol")});
+
+nicosiaMapLabel.addEventListener('click', event => {cyprusMapClickHandler("Nicosia")});
+limassolMapLabel.addEventListener('click', event => {cyprusMapClickHandler("Limassol")});

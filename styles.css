@@ -660,6 +660,215 @@ body {
 }
 
 
+/* Cyprus Map Section */
+.map-section {
+	background-color: #fffcf3;
+	min-height: 720px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	gap: 20px;
+}
+
+.map-cyprus {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-top: 80px;
+}
+
+.map-headline {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.map-headline h1 {
+	margin: 0;
+	font-family: "Avenir Medium";
+	font-size: 28px;
+	line-height: 32px;
+	color: #6d31d0;
+}
+
+.map-headline p {
+	margin: 0;
+	font-family: "Montserrat SemiBold";
+	font-size: 20px;
+	line-height: 32px;
+	color: #434364;
+}
+
+.map-holder {
+	width: 681px;
+	height: 414px;
+}
+
+#map-background {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+.map-grey-section {
+	position: relative;
+	z-index: 2;
+}
+
+#map-grey-section-north {
+	top: -512px;
+	left: 193px;
+}
+
+#map-grey-section-east {
+	top: -415px;
+	left: 155px;
+}
+
+.map-city {
+	position: relative;
+	z-index: 3;
+}
+
+#nicosia-map {
+	top: -532px;
+	left: 91px;
+}
+
+#nicosia-map:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+#paphos-map {
+	top: -661px;
+	left: 4px;
+}
+
+#limassol-map {
+	top: -796px;
+	left: 112px;
+}
+
+#limassol-map:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+#larnaka-map {
+	top: -1021px;
+	left: 256px;
+}
+
+.map-label {
+	position: relative;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	z-index: 4;
+	margin: 0;
+	width: fit-content;
+}
+
+#nicosia-map-label {
+	top: -610px;
+	left: 200px;
+	color: #434364;
+}
+
+#nicosia-map-label:hover {
+	cursor: pointer;
+}
+
+#nicosia-map:has(+ #nicosia-map-label:hover) {
+	opacity: 0.5;
+}
+
+#paphos-map-label {
+	top: -750px;
+	left: 50px;
+	color: white;
+}
+
+#limassol-map-label {
+	top: -890px;
+	left: 170px;
+	color: white;
+}
+
+#limassol-map-label:hover {
+	cursor: pointer;
+}
+
+#limassol-map:has(+ #limassol-map-label:hover) {
+	opacity: 0.5;
+}
+
+#larnaka-map-label {
+	top: -1090px;
+	left: 310px;
+	color: #434364;
+}
+
+.map-description-card {
+	display: flex;
+	flex-direction: column;
+	width: 480px;
+	height: fit-content;
+	background-color: white;
+	border-radius: 12px;
+	margin-top: 80px;
+	margin-bottom: 35px;
+}
+
+#map-description-card-nicosia {
+	display: none;
+}
+
+.map-description-images {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 13px;
+}
+
+.map-city-description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	border-radius: 12px;
+	box-shadow: 12.8px 15.36px 13px 0px rgba(0, 0, 0, 0.035);
+}
+
+.map-city-description-title {
+	font-family: "Montserrat SemiBold";
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 32px;
+	text-align: center;
+	color: #434364;
+	margin: 0;
+	margin-top: 4px;
+}
+
+.map-city-description-text {
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #434364;
+	margin: 0;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 25px;
+}
+
 /* Media */
 @media screen and (max-width: 1000px) {
 	.header {
@@ -706,6 +915,33 @@ body {
 
 	.transparent-bar {
 		display: none;
+	}
+
+	.map-section {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.map-cyprus {
+		gap: 60px;
+		align-items: center;
+	}
+
+	.map-headline h1 {
+		text-align: center;
+	}
+
+	.map-headline p {
+		font-family: "Avenir Regular";
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.5px;
+		text-align: center;
+	}
+
+	.map-description-card {
+		margin: 0;
+		margin-bottom: 20px;
 	}
 }
 
@@ -780,6 +1016,73 @@ body {
 
 	.wcc-headline {
 		max-width: 80%;
+	}
+
+	.map-headline {
+		width: 380px;
+	}
+
+	.map-holder {
+		height: 290px;
+		width: 480px;
+	}
+
+	.map-grey-section {
+		scale: calc(100% / 1.41875);
+	}
+
+	#map-grey-section-north {
+		top: -221px;
+		left: 104px;
+	}
+
+	#map-grey-section-east {
+		top: -388px;
+		left: 220px;
+	}
+
+	.map-city {
+		scale: calc(100% / 1.41875);
+	}
+
+	#nicosia-map {
+		top: -532px;
+		left: 20px;
+	}
+
+	#paphos-map {
+		top: -679px;
+		left: -20px;
+	}
+
+	#limassol-map {
+		top: -830px;
+		left: 51px;
+	}
+
+	#larnaka-map {
+		top: -1039px;
+		left: 147px;
+	}
+
+	#nicosia-map-label {
+		top: -620px;
+		left: 150px;
+	}
+
+	#paphos-map-label {
+		top: -770px;
+		left: 30px;
+	}
+
+	#limassol-map-label {
+		top: -920px;
+		left: 110px;
+	}
+
+	#larnaka-map-label {
+		top: -1110px;
+		left: 205px;
 	}
 }
 
