@@ -38,6 +38,15 @@ const mapHeadlineParagraph = document.getElementById("map-headline-paragraph");
 const mapHeadlineParagraphDesktop = "Click your mouse over any city to learn more about it";
 const mapHeadlineParagraphMobile = "Tap on any city to learn more about it";
 
+const wwaAboutUs = document.getElementById("wwa-about-us");
+const wwaLine = document.getElementById("wwa-line");
+
+function wwaLineOffset() {
+	wwaLine.style.marginLeft = String(-wwaAboutUs.getBoundingClientRect().left) + "px";
+}
+
+wwaLineOffset();
+
 function widthAdapt() {
 	const width = window.innerWidth;
 
@@ -49,8 +58,11 @@ function widthAdapt() {
 
 	if (width <= 480) {
 		wccHeadlineTitle.textContent = wccHeadlineTitleTextNew;
+		window.removeEventListener('resize', wwaLineOffset);
+		wwaLine.style.marginLeft = "0px";
 	} else {
 		wccHeadlineTitle.textContent = wccHeadlineTitleTextOld;
+		window.addEventListener('resize', wwaLineOffset);
 	}
 }
 
@@ -112,3 +124,4 @@ limassolMap.addEventListener('click', event => {cyprusMapClickHandler("Limassol"
 
 nicosiaMapLabel.addEventListener('click', event => {cyprusMapClickHandler("Nicosia")});
 limassolMapLabel.addEventListener('click', event => {cyprusMapClickHandler("Limassol")});
+

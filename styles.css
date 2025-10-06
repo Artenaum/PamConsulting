@@ -114,6 +114,7 @@ body {
 	font-family: "Montserrat SemiBold", monospace;
 	font-size: 20px;
 	color: #6d31d0;
+	text-wrap: nowrap;
 }
 
 .get-in-touch-button:hover {
@@ -869,6 +870,111 @@ body {
 	margin-bottom: 25px;
 }
 
+.wwa-section {
+	background: linear-gradient(#828cde, #6d31d0);
+	display: flex;
+	gap: 120px;
+	justify-content: space-evenly;
+}
+
+#wwa-about-us {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	width: 480px;
+}
+
+.wwa-about-us-title {
+	margin: 0;
+	margin-top: 64px;
+	font-family: "Avenir Medium";
+	font-size: 36px;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#wwa-line {
+	width: 447px;
+	height: 4px;
+	margin-top: 4px;
+	position: relative;
+	background-color: #fdbfa3;
+}
+
+.wwa-about-us-text {
+	margin: 0;
+	margin-top: 24px;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: white;
+}
+
+#wwa-about-us .get-in-touch-button {
+	width: 180px;
+	height: 48px;
+	box-shadow: 0px 14px 23px 0px rgba(28, 37, 44, 0.08);
+	margin-top: 54px;
+}
+
+.wwa-team-card {
+	margin-top: 40px;
+	margin-bottom: 35px;
+	display: flex;
+	gap: 13px;
+	width: 580px;
+	height: 440px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 14px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.wwa-team-card-image {
+	position: relative;
+	margin: 20px;
+	width: 280px;
+	height: 400px;
+	border-radius: 10px;
+}
+
+.wwa-team-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.wwa-team-card-info {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.wwa-team-card-title {
+	margin: 0;
+	margin-top: 44px;
+	margin-left: 7px;
+	font-family: "Montserrat SemiBold";
+	font-size: 20px;
+	line-height: 32px;
+	color: #6d31d0;
+}
+
+.wwa-team-card-name {
+	margin: 0;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: #434364;
+}
+
+.wwa-team-card-info .get-in-touch-button {
+	margin-top: 2px;
+	box-shadow: 0px 14px 23px 0px rgba(28, 37, 44, 0.08);
+}
+
 /* Media */
 @media screen and (max-width: 1000px) {
 	.header {
@@ -942,6 +1048,40 @@ body {
 	.map-description-card {
 		margin: 0;
 		margin-bottom: 20px;
+	}
+
+	.wwa-section {
+		flex-direction: column;
+		gap: 44px;
+	}
+
+	#wwa-about-us {
+		margin-left: 110px;
+	}
+
+	.wwa-about-us-title {
+		text-transform: capitalize;
+		font-size: 40px;
+		line-height: 29px;
+	}
+
+	#wwa-line {
+		margin-top: 20px;
+	}
+
+	.wwa-about-us-text {
+		width: 680px;
+	}
+
+	#wwa-about-us .get-in-touch-button {
+		margin-bottom: 0;
+		margin-top: 47px;
+	}
+
+	.wwa-team-card {
+		margin-left: 110px;
+		margin-top: 0;
+
 	}
 }
 
@@ -1084,6 +1224,35 @@ body {
 		top: -1110px;
 		left: 205px;
 	}
+
+	.wwa-section {
+		align-items: center;
+	}
+
+	#wwa-about-us {
+		margin-left: 0;
+		width: 580px;
+	}
+
+	.wwa-about-us-title {
+		align-self: center;
+	}
+
+	#wwa-line {
+		width: 80%;
+	}
+
+	.wwa-about-us-text {
+		width: 100%;
+	}
+
+	#wwa-about-us .get-in-touch-button {
+		margin-top: 30px;
+	}
+
+	.wwa-team-card {
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -1190,5 +1359,54 @@ body {
 	#wcc-icon-4 {
 		background: url("/images/icons/house.svg") 50%/60% no-repeat,
 		linear-gradient(to right, #ffb9af 30%, #a651fb);
+	}
+
+	#wwa-about-us {
+		width: 380px;
+	}
+
+	.wwa-section {
+		gap: 40px;
+	}
+
+	.wwa-about-us-title {
+		align-self: auto;
+	}
+
+	.wwa-about-us-text {
+		width: 100%;
+	}
+
+	.wwa-team-card {
+		width: 380px;
+		height: 600px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0px;
+	}
+
+	.wwa-team-card-image {
+		margin-bottom: 0;
+	}
+
+	.wwa-team-card-info {
+		gap: 0px;
+		align-items: center;
+		margin-top: 14px;
+	}
+
+	.wwa-team-card-title {
+		margin-top: 0;
+	}
+
+	.wwa-team-card-name {
+		margin-top: 0;
+	}
+
+	.wwa-team-card-info .get-in-touch-button {
+		margin-top: 20px;
+		display: flex;
+		margin-bottom: 40px;
 	}
 }
