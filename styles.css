@@ -870,6 +870,8 @@ body {
 	margin-bottom: 25px;
 }
 
+
+/* Who We Are Section (wwa) */
 .wwa-section {
 	background: linear-gradient(#828cde, #6d31d0);
 	display: flex;
@@ -973,6 +975,115 @@ body {
 .wwa-team-card-info .get-in-touch-button {
 	margin-top: 2px;
 	box-shadow: 0px 14px 23px 0px rgba(28, 37, 44, 0.08);
+}
+
+
+/* How Make Happen Section (hmh) */
+.hmh-section {
+	background: linear-gradient(#fefc9e, #fdbfa3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 60px;
+}
+
+.hmh-headline {
+	margin-top: 80px;
+	max-width: 580px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#hmh-title {
+	margin: 0;
+	font-family: "Avenir Medium";
+	font-size: 36px;
+	line-height: 40px;
+	text-align: center;
+	color: #434364;
+	text-wrap-mode: nowrap;
+}
+
+.hmh-boxes {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+.hmh-box-set {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 20px;
+}
+
+.hmh-box {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	width: 280px;
+	gap: 24px;
+}
+
+.hmh-icon {
+	width: 120px;
+	height: 120px;
+	border-radius: 800px;
+}
+
+#hmh-icon-1 {
+	background: url("/images/icons/listener.svg") 50% no-repeat,
+	linear-gradient(to right, #828cde, #00b8c3);
+}
+
+#hmh-icon-2 {
+	background: url("/images/icons/target.svg") 50% no-repeat,
+	linear-gradient(to right, #fe6f2d, #ffd059);
+}
+
+#hmh-icon-3 {
+	background: url("/images/icons/heart.svg") 50% no-repeat,
+	linear-gradient(to right, #2ea3f2, #a651fb);
+}
+
+#hmh-icon-4 {
+	background: url("/images/icons/heart2.svg") 50% no-repeat,
+	linear-gradient(to right, #ffb9af 30%, #a651fb);
+}
+
+.hmh-text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px;
+}
+
+.hmh-text-block h1 {
+	margin: 0;
+	margin-top: 10px;
+	font-family: "Montserrat SemiBold";
+	font-size: 20px;
+	line-height: 32px;
+	text-align: center;
+	color: #6d31d0;
+}
+
+.hmh-text-block p {
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #434364;
 }
 
 /* Media */
@@ -1252,6 +1363,10 @@ body {
 
 	.wwa-team-card {
 		margin-left: 0;
+	}
+
+	.hmh-box {
+		width: 180px;
 	}
 }
 

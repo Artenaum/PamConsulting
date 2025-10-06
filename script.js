@@ -41,6 +41,10 @@ const mapHeadlineParagraphMobile = "Tap on any city to learn more about it";
 const wwaAboutUs = document.getElementById("wwa-about-us");
 const wwaLine = document.getElementById("wwa-line");
 
+const hmhTitle = document.getElementById("hmh-title");
+const hmhTitleTextWide = "HOW WE MAKE IT HAPPEN";
+const hmhTitleTextThin = "HOW WE MAKE" + "\n" + "IT HAPPEN";
+
 function wwaLineOffset() {
 	wwaLine.style.marginLeft = String(-wwaAboutUs.getBoundingClientRect().left) + "px";
 }
@@ -58,10 +62,12 @@ function widthAdapt() {
 
 	if (width <= 480) {
 		wccHeadlineTitle.textContent = wccHeadlineTitleTextNew;
+		hmhTitle.innerText = hmhTitleTextThin;
 		window.removeEventListener('resize', wwaLineOffset);
 		wwaLine.style.marginLeft = "0px";
 	} else {
 		wccHeadlineTitle.textContent = wccHeadlineTitleTextOld;
+		hmhTitle.innerText = hmhTitleTextWide;
 		window.addEventListener('resize', wwaLineOffset);
 	}
 }
