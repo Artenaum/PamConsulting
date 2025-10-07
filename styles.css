@@ -50,6 +50,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 .header-menu-button-text {
@@ -108,6 +109,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 .get-in-touch-text {
@@ -306,6 +308,7 @@ body {
 	font-size: 20px;
 	text-align: center;
 	color: #6d31d0;
+	cursor: pointer;
 }
 
 .find-out-more-button:hover {
@@ -1086,6 +1089,241 @@ body {
 	color: #434364;
 }
 
+
+/* Contact Us Section */
+.contact-section {
+	background: linear-gradient(180deg, rgba(109, 49, 208, 0.1) 0%, rgba(109, 49, 208, 0.21) 28.65%, rgba(109, 49, 208, 0.475) 53.12%, #6D31D0 100%);
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+
+.contact-headline {
+	margin-top: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.contact-headline h1 {
+	margin: 0;
+	font-family: "Avenir Medium";
+	font-size: 36px;
+	line-height: 40px;
+	text-align: center;
+	color: #434364;
+}
+
+.contact-line {
+	width: 380px;
+	height: 4px;
+	background: #fdbfa3;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.contact-tel-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6px;
+}
+
+.contact-email-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.contact-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+#contact-icon-tel {
+	background: url("/images/icons/contact-tel.svg") 50% no-repeat,
+	linear-gradient(90deg, #6D31D0 0%, #AB80EF 104.7%);
+}
+
+#contact-icon-email {
+	background: url("/images/icons/contact-email.svg") 50% no-repeat,
+	linear-gradient(90deg, #6D31D0 0%, #AB80EF 104.7%);
+}
+
+.contact-link {
+	font-family: "Montserrat SemiBold";
+	font-size: 20px;
+	line-height: 32px;
+	color: #6D31D0;
+	text-decoration: none;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 80px;
+	background: rgba(255, 219, 128, 0.5);
+	border-radius: 60px;
+	backdrop-filter: blur(500px);
+	width: 100%;
+}
+
+.contact-form h1 {
+	margin: 0;
+	margin-top: 35px;
+	font-family: "Avenir Medium";
+	font-size: 28px;
+	line-height: 32px;
+	text-align: center;
+	color: #434364;
+}
+
+.contact-form-fields {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 14px;
+	width: 580px;
+}
+
+.contact-form-field-pair {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+}
+
+.contact-form-field {
+	height: 47px;
+	width: 280px;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 0px 4px 8px 0px #1C252C14;
+	padding-left: 23px;
+	box-sizing: border-box;
+}
+
+.contact-form-field::placeholder {
+	margin: 0;
+	margin-left: 23px;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #434364;
+	opacity: 0.5;
+}
+
+#contact-form-field-message {
+	resize: none;
+	width: 100%;
+	height: 200px;
+	padding-top: 18px;
+}
+
+.contact-form-conditions {
+	width: 580px;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.conditions-checkbox-container {
+	width: 32px;
+	height: 32px;
+}
+
+#conditions-checkbox {
+	appearance: none;
+	margin: 0;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0);
+	border: 1px solid white;
+	border-radius: 4px;
+	display: grid;
+	place-content: center;
+}
+
+#conditions-checkbox::after {
+	content: "";
+	width: 32px;
+	height: 32px;
+	background: url("/images/icons/tick.svg") 50% no-repeat, rgba(255, 255, 255, 1);
+	border-radius: 4px;
+	transform: scale(0);
+}
+
+#conditions-checkbox:checked::after {
+	transform: scale(1);
+}
+
+.conditions-label {
+	margin: 0;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: #605866;
+}
+
+.conditions-label a {
+	text-decoration: underline;
+	color: #6D31D0;
+}
+
+.condition-label a:visited {
+	color: #6D31D0;
+}
+
+.submit-button {
+	height: 60px;
+	width: 138px;
+	border-radius: 30px;
+	background: #FFDB80;
+	border: none;
+	box-shadow: 0px 14px 23px 0px #1C252C14;
+	font-family: "Avenir Medium";
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 120%;
+	text-align: center;
+	color: #6D31D0;
+	cursor: pointer;
+}
+
+.submit-button:hover {
+	background: linear-gradient(180deg, #828CDE -21.43%, #6D31D0 201.93%);
+	border: 1px solid #FFDB80;
+	color: #FFDB80;
+}
+
+#submit-button-contact {
+	margin-bottom: 34px;
+}
+
 /* Media */
 @media screen and (max-width: 1000px) {
 	.header {
@@ -1193,6 +1431,12 @@ body {
 		margin-left: 110px;
 		margin-top: 0;
 
+	}
+
+	.contact-form {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
@@ -1523,5 +1767,35 @@ body {
 		margin-top: 20px;
 		display: flex;
 		margin-bottom: 40px;
+	}
+
+	.contact-section {
+		gap: 40px;
+	}
+
+	.contact-headline {
+		margin-top: 60px;
+	}
+
+	.contact-form {
+		margin-bottom: 60px;
+	}
+
+	.contact-form-fields {
+		width: 380px;
+	}
+
+	.contact-form-field-pair {
+		flex-direction: column;
+		align-items: center;
+		gap: 14px;
+	}
+
+	.contact-form-field {
+		width: 380px;
+	}
+
+	.contact-form-conditions {
+		width: 380px;
 	}
 }
