@@ -1478,6 +1478,49 @@ body {
 	margin-bottom: 80px;
 }
 
+
+/* Footer */
+.footer {
+	display: flex;
+	height: 100px;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #828CDE;
+}
+
+#footer-phantom {
+	width: 200px;
+}
+
+#footer-copyright {
+	margin: 0;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: white;
+	text-wrap: nowrap;
+}
+
+#footer-copyright a {
+	color: white;
+	text-decoration: none;
+}
+
+#footer-author-link {
+	margin-right: 50px;
+	font-family: "Avenir Regular";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	text-wrap: nowrap;
+}
+
 /* Media */
 @media screen and (max-width: 1000px) {
 	.header {
@@ -1591,6 +1634,14 @@ body {
 		width: auto;
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+
+	#footer-phantom {
+		display: none;
+	}
+
+	#footer-copyright {
+		margin-left: 100px;
 	}
 }
 
@@ -1778,6 +1829,25 @@ body {
 	.partners-icons {
 		row-gap: 40px;
 		margin-bottom: 60px;
+	}
+
+	.footer {
+		flex-direction: column;
+		justify-content: center;
+		height: 160px;
+	}
+
+	#footer-copyright {
+		margin: 0;
+		font-weight: bold;
+	}
+
+	#footer-copyright a {
+		font-weight: normal;
+	}
+
+	#footer-author-link {
+		margin: 0;
 	}
 }
 
@@ -1968,5 +2038,9 @@ body {
 
 	.contact-form-conditions {
 		width: 380px;
+	}
+
+	.footer {
+		gap: 26px;
 	}
 }

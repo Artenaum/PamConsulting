@@ -73,6 +73,11 @@ const hmhTitle = document.getElementById("hmh-title");
 const hmhTitleTextWide = "HOW WE MAKE IT HAPPEN";
 const hmhTitleTextThin = "HOW WE MAKE" + "\n" + "IT HAPPEN";
 
+const footerCopyright = document.getElementById("footer-copyright");
+const footerCopyrightTextWide = "&copy; 2022 PAM Consulting. All rights reserved | <a>Disclaimer</a> | <a>Privacy policy</a>";
+const footerCopyrightTextThin = "&copy; 2022 PAM Consulting. All rights reserved<br><a>Disclaimer</a> | <a>Privacy policy</a>";
+const footerCopyrightTextThinner = "&copy; 2022 PAM Consulting. All rights reserved<br><a>Disclaimer</a><br><a>Privacy policy</a>";
+
 function wwaLineOffset() {
 	wwaLine.style.marginLeft = String(-wwaAboutUs.getBoundingClientRect().left) + "px";
 }
@@ -91,6 +96,14 @@ function widthAdapt() {
 		mapHeadlineParagraph.textContent = mapHeadlineParagraphDesktop;
 	} else {
 		mapHeadlineParagraph.textContent = mapHeadlineParagraphMobile;
+	}
+
+	if (width > 768) {
+		footerCopyright.innerHTML = footerCopyrightTextWide;
+	} else if (width <= 768 && width > 480) {
+		footerCopyright.innerHTML = footerCopyrightTextThin;
+	} else {
+		footerCopyright.innerHTML = footerCopyrightTextThinner;
 	}
 
 	if (width <= 480) {
