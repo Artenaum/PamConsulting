@@ -13,28 +13,23 @@ const swiperOffer = new Swiper('#swiper-offer', {
 
 const swiperFAQ = new Swiper('#swiper-faq', {
 	direction: 'horizontal',
-	slidesPerView: 'auto',
-	//slidesPerGroup: 3,
-	watchOverflow: true,
-	watchSlidesProgress: true,
-	slideFullyVisibleClass: "swiper-slide-faq-fully-visible",
 	spaceBetween: 20,
-	/*breakpoints: {
+	breakpoints: {
 		100: {
-			//slidesPerView: 1,
-			slidesPerGroup: 1
+			slidesPerView: 1,
+			//slidesPerGroup: 1
 		},
 		481: {
-			//slidesPerView: 2,
-			slidesPerGroup: 2
+			slidesPerView: 2,
+			//slidesPerGroup: 2
 		},
 		1001: {
-			//slidesPerView: 3,
-			slidesPerGroup: 3
+			slidesPerView: 3,
+			//slidesPerGroup: 3
 		}
-	},*/
+	},
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.faq-swiper-pagination',
 		clickable: true,
 	}
 })
@@ -87,10 +82,10 @@ wwaLineOffset();
 function widthAdapt() {
 	const width = window.innerWidth;
 
-	var FAQVisibleSlides = document.querySelectorAll('#swiper-faq .swiper-slide-faq-fully-visible');
-	var FAQNumberOfVisibleSlides = FAQVisibleSlides.length;
-	swiperFAQ.params.slidesPerGroup = FAQNumberOfVisibleSlides;
-	swiperFAQ.update();
+	//var FAQVisibleSlides = document.querySelectorAll('#swiper-faq .swiper-slide-faq-fully-visible');
+	//var FAQNumberOfVisibleSlides = FAQVisibleSlides.length;
+	//swiperFAQ.params.slidesPerGroup = FAQNumberOfVisibleSlides;
+	//swiperFAQ.update();
 
 	if (width >= 1000) {
 		mapHeadlineParagraph.textContent = mapHeadlineParagraphDesktop;

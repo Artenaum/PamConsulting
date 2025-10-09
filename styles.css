@@ -1380,6 +1380,10 @@ body {
 	width: 80%;
 }
 
+#faq-swiper-wrapper {
+	/* overflow: hidden; */
+}
+
 .swiper-slide-faq {
 	display: flex;
 	flex-direction: column;
@@ -1392,7 +1396,6 @@ body {
 	border-radius: 20px;
 	border: none;
 	gap: 0;
-	opacity: 0.5;
 }
 
 .swiper-slide-faq-fully-visible {
@@ -1400,7 +1403,7 @@ body {
 }
 
 #swiper-faq {
-	
+	width: 100%;
 }
 
 .faq-picture-holder {
